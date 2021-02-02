@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="wrapper">
+    {% include 'menu.html' %}
+    <div class="produkt">
+        <div class="nazwa">asdasdasdas</div>
+        <div class="zdjecie"><img src="{{obj.zdjecie.url}}"  alt="" width="500"></div>
+        <div class="nazwa">{{obj_slug.nazwa}}</div>
+        <div class="cena">{{obj.cena}}</div>
+        <div class="opis">{{obj.opis}}</div>
+        <div class="sumup">{{obj.sumup}}</div>
+        <div class="sumup">{{obj.slug}}jee</div>
+        <form action="" method="POST" >
+            {% csrf_token %}
+            <button type="submit">Kup teraz!</button>
+        </form>
+
+        <form action="cart">
+        <button type="submit">
+        Przejdz do kosza    
+        </button></form>
+        
+    </div>
+</div>
+</body>
+</html>

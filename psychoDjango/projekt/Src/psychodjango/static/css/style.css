@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: 'Brown Regular';
+    src: url('Brown-Regular.eot');
+    src: url('Brown-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Brown-Regular.woff') format('woff'),
+        url('Brown-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: bold;
+}
+
+
+div.wraper {
+    margin: 0 auto;
+    max-width: 1280px;
+    background-color: #FFF;
+    font-family: "Brown Regular", "serif";
+    color: #002;
+    font-weight: 1000;
+}
+
+.logoMain {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+nav {
+    background-color: #FFF;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    padding: 20px;
+    margin: 0 auto;
+    color: #011;
+    font-size: 13px;
+    text-decoration: none;
+    font-family: brown regular, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #FFF;
+    font-weight: 1000;
+}
+
+nav ul li a:hover {
+    background-color: #FFD;
+}
+
+
+main {
+    max-width: 1440px;
+    margin: 15vh auto;
+    text-align: center;
+}
+
+
+.freeSpace {
+    margin: 150px auto;
+
+}
+
+
+.oNas p {
+    font-size: 50px;
+}
+
+
+h2 {
+    font-size: 50px;
+}
+
+.photoBlog {
+    display: block;
+    max-width: 1024px;
+    margin: 100px auto;
+    padding: 100px 200px;
+    background-position: 15% 33%;
+    background-image: url(https://amperwood.com/wp-content/uploads/2020/05/DSC6676-1.jpg);
+    background-attachment: fixed;
+}
+
+section.kontakt {
+    display: block;
+    max-width: 1024px;
+    margin: 100px auto;
+    padding: 100px 200px;
+    position: relative;
+
+}
+
+.kontakt {
+    position: relative;
+    z-index: 1;
+}
+
+.kontakt button {
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.kontakt button:hover {
+    font-size: 20px;
+    transition-duration: 0.3s;
+}
+
+.kontakt p {
+    padding: 10px 10px;
+    font-size: 26px;
+}
+
+section.kontakt::before {
+    position: absolute;
+    content: "";
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-position: 15% 33%;
+    right: 0px;
+    background-image: url(https://amperwood.com/wp-content/uploads/2020/05/Amperwood-8-scaled-2048x1366.jpg);
+    background-size: cover;
+    opacity: 0.4;
+}
+
+.socialMediaIcons img {
+    height: 100px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footerInfo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.newsletter {
+    padding: 40px 100px;
+    background-color: #FFF;
+}
+
+.underPages {
+    padding: 40px 100px;
+    background-color: #FFF;
+}
+
+
+.footerNavi {
+    display: block;
+}
+
+section.mainBlocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.soloBlock {
+    padding: 50px 50px;
+    margin: 10px 10px;
+    position: relative;
+    width: 30vw;
+    height: 60vh;
+    min-width: 200px;
+    min-height: 420px;
+}
+
+div.soloBlock::after {
+    position: absolute;
+    background-image: url(https://amperwood.com/wp-content/uploads/2020/05/DSC6676-1.jpg);
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.Btn {
+    position: relative;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.Btn:hover {
+    font-size: 20px;
+    transition-duration: 0.3s;
+}
+
+.soloBlockButton p {
+    text-transform: uppercase;
+    font-size: 20px;
+    padding-top: 250px;
+}
+
+/* NOWY PLIK NOWA STRONA */
+.produktyWSklepie {
+    display: block;
+    max-width: 1280px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.nazwa div {
+    text-transform: uppercase;
+
+
+}
+
+.produkt {
+    display: inline-block;
+    text-align: center;
+    padding: 40px;
+
+}

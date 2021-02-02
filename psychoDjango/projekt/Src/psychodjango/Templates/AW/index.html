@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AmperWood</title>
+    <link rel="stylesheet" type="text/css" href={% static "css/style.css" %}>
+</head>
+
+<body>
+    <div class="wraper">
+        {% include 'menu.html' %}
+        
+        <!-- <div>
+            <img src={% static "image/loko.PNG" %} alt="Logo firmy AmperWood" class="logoMain" height="100px">
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="#">AmperWood</a></li>
+                    <li><a href="https://amperwood.com/o-nas/">O nas</a></li>
+                    <li><a href="https://amperwood.com/o-wzorach/">O wzorach</a></li>
+                    <li><a href="https://amperwood.com/sklep/">Sklep</a></li>
+                    <li><a href="https://amperwood.com/indywidualne-zamowienia/">Indywidualne zamówienia</a></li>
+                    <li><a href="https://amperwood.com/portfolio/">Portfolio</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href='accounts/logout'>Wyloguj się</a></li>
+                    {% else %}
+                    
+                    <li><a href='accounts/register'>Rejestracja</a></li>
+                    <li><a href='accounts/login'>Zaloguj się</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <div>
+                {% if user.is_authenticated %}
+
+                <p>Witamy Cię {{user.first_name}}</p>                    
+                {% endif %}
+            </div>
+        </div> -->
+        <main>
+
+            <section class="mainBlocks">
+                <div class="soloBlock">
+                    <div class="soloBlockButton">
+                        <p class="soloBlockButton">Magnetyczne otwieracze</p>
+                        <button class="Btn">Zobacz więcej!</button>
+                    </div>
+                </div>
+                <div class="soloBlock">
+                    <div class="soloBlockButton">
+                        <p>Deski do krojenia</p>
+                        <button class="Btn">Zobacz więcej!</button>
+                    </div>
+                </div>
+                <div class="soloBlock">
+                    <div class="soloBlockButton">
+                        <p>Indywidualne zamówienia</p>
+                        <button class="Btn">Zobacz więcej!</button>
+                    </div>
+                </div>
+            </section>
+
+            
+            <div class="freeSpace"></div>
+            <section class="oNas">
+
+                <p>
+                    Tworzymy z pasji do wzorów.
+                </p>
+
+                <div class="photoBlog"></div>
+                <p>
+                    Tworzymy z pasji do wzorów.
+                </p>
+
+                <div class="photoBlog"></div>
+                <p>
+                    Tworzymy z pasji do wzorów.
+                    
+                </p>
+                {% block content %}
+                {% endblock %}
+
+                {% block opis %}
+                {% endblock %}
+
+                <div class="photoBlog"></div>
+
+            </section>
+            <div class="freeSpace"></div>
+            <section class="kontakt">
+
+                <div class="kontakt">
+                    <h2>
+                        KONTAKT
+                    </h2>
+                    <p class="kontakt">Sebastian</p>
+                    <p class="kontakt">795 563 216</p>
+                    <p class="kontakt">Marcin</p>
+                    <p class="kontakt">663 749 705</p>
+                    <p class="kontakt">kontakt@amperwood.com</p>
+                    <button>KONTAKT</button>
+                </div>
+
+            </section>
+            <div class="freeSpace"></div>
+            <section class="socialMedia">
+                <h2>SOCIAL MEDIA</h2>
+                <div class="freeSpace"></div>
+                <div class="icons">
+                    <div class="socialMediaIcons">
+                        <p>Instagram</p>
+                        <button><img src="image/facebook.png" alt=""></button>
+                    </div>
+
+                    <div class="socialMediaIcons">
+                        <p>Facebook</p>
+                        <button><img src="image/facebook.png" alt=""></button>
+                    </div>
+
+
+                    <div class="socialMediaIcons">
+                        <p>Twitter</p>
+                        <button><img src="image/twitter.png" alt=""></button>
+                    </div>
+
+                    <div class="socialMediaIcons">
+                        <p>Etsy</p>
+                        <button><img src="image/twitter.png" alt=""></button>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="portfolio"></section>
+
+
+
+            <!--
+            <div class="bloki">
+                <div class="blocks">
+                    <div class="art1">
+                        <p>dasdadas</p>
+                    </div>
+                    <div class="art2"></div>
+                    <div class="art3"></div>
+                </div>
+            </div>
+-->
+
+
+
+
+        </main>
+        <footer>
+            <div>
+                <img src="image/loko.PNG" alt="Logo firmy AmperWood" class="logoMain" height="70px">
+            </div>
+            <div class="footerInfo">
+                <div class="newsletter">
+                    <p>Zapisz się do Newslettera!</p>
+                    <input type="Podaj maila">
+                </div>
+                <div class="underPages">
+                    <p class="footerNavi"><a href="#">Polityka prywatności</a></p>
+                    <p class="footerNavi"><a href="#">Koszty wysyłki</a></p>
+                    <p class="footerNavi"><a href="#">blabla</a></p>
+                    <p class="footerNavi"><a href="#">bla bla1</a></p>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+</body></html>

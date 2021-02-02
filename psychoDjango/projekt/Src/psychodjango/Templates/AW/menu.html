@@ -1,0 +1,33 @@
+{% load static %}
+
+{% block menu %}
+<div>
+    <img src={% static "image/loko.PNG" %} alt="Logo firmy AmperWood" class="logoMain" height="100px">
+</div>
+<div class="menu">
+    <nav>
+        <ul>
+            <li><a href="#">AmperWood</a></li>
+            <li><a href="https://amperwood.com/o-nas/">O nas</a></li>
+            <li><a href="https://amperwood.com/o-wzorach/">O wzorach</a></li>
+            <li><a href="https://amperwood.com/sklep/">Sklep</a></li>
+            <li><a href="https://amperwood.com/indywidualne-zamowienia/">Indywidualne zamówienia</a></li>
+            <li><a href="https://amperwood.com/portfolio/">Portfolio</a></li>
+            {% if user.is_authenticated %}
+            <li><a href='accounts/logout'>Wyloguj się</a></li>
+            {% else %}
+            
+            <li><a href='accounts/register'>Rejestracja</a></li>
+            <li><a href='accounts/login'>Zaloguj się</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div>
+        {% if user.is_authenticated %}
+
+        <p>Witamy Cię {{user.first_name}}</p>                    
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
