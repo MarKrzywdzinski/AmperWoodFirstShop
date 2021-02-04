@@ -3,7 +3,7 @@ from django.contrib.auth.models import User, auth
 from django.conf.global_settings import AUTH_USER_MODEL
 from django.contrib.auth import get_user_model
 # Create your views here.
-from .models import Product
+from produkty.models import Product
 from .forms import ProductForm
 from account.models import Cart
 
@@ -33,14 +33,14 @@ def produkt_opis_widok(request):
     return render(request, "opis.html", kontekst)
 
 
-def produktyWSklepie(request):
+def productsInStore(request):
 
     obj = Product.objects.all()
 
     return render(request, 'Sklep.html', {'obj': obj})
 
 
-def pojedynczyProdukt(request, slug):
+def SingleProduct(request, slug):
     print(slug)
     obj_slug = get_object_or_404(Product, slug=slug)
     obj = Product.objects.get(slug=slug)
@@ -49,7 +49,7 @@ def pojedynczyProdukt(request, slug):
         koszyk = Cart.objects.get()
         item = koszyk.rzeczyWKoszu.get(slug=slug)
         itemyWKoszyku.append(item)
-        print('haaaaalo', user, koszyk, item,
+        print('Added SigleProduct to cart', user, koszyk, item,
               item.slug, itemyWKoszyku)
         kontext = {
             'produkt404_slug': obj_slug,
@@ -76,3 +76,7 @@ def cart(request, slug):
         print(suma)
 
     return render(request, 'cart.html', {'itemyWKoszyku': itemyWKoszyku, 'suma': suma})
+
+def portfolio(request, *args, **kwargs):
+    portPhoto = Product.objects.all()
+    return render(request, "portfolio.html", {"portPhoto": portPhoto})

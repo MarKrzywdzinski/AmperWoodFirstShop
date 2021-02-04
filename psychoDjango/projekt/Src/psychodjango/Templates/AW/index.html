@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>AmperWood</title>
+    
     <link rel="stylesheet" type="text/css" href={% static "css/style.css" %}>
 </head>
 
@@ -46,19 +47,19 @@
                 <div class="soloBlock">
                     <div class="soloBlockButton">
                         <p class="soloBlockButton">Magnetyczne otwieracze</p>
-                        <button class="Btn">Zobacz więcej!</button>
+                        <button class="Btn"><a href="http://127.0.0.1:8000/Sklep/">Zobacz więcej!</a> </button>
                     </div>
                 </div>
                 <div class="soloBlock">
                     <div class="soloBlockButton">
                         <p>Deski do krojenia</p>
-                        <button class="Btn">Zobacz więcej!</button>
+                        <button class="Btn"><a href="http://127.0.0.1:8000/Sklep/">Zobacz więcej!</a> </button>
                     </div>
                 </div>
                 <div class="soloBlock">
                     <div class="soloBlockButton">
                         <p>Indywidualne zamówienia</p>
-                        <button class="Btn">Zobacz więcej!</button>
+                        <button class="Btn"><a href="http://127.0.0.1:8000/Sklep/">Zobacz więcej!</a> </button>
                     </div>
                 </div>
             </section>
@@ -113,24 +114,25 @@
                 <div class="icons">
                     <div class="socialMediaIcons">
                         <p>Instagram</p>
-                        <button><img src="image/facebook.png" alt=""></button>
+                        <a href="https://www.facebook.com/amperwoodoffcial/"><img src="/static/image/facebook.png" alt="">
+                    </a>
                     </div>
 
                     <div class="socialMediaIcons">
                         <p>Facebook</p>
-                        <button><img src="image/facebook.png" alt=""></button>
-                    </div>
+                        <a href="https://www.facebook.com/amperwoodoffcial/"><img src="/static/image/instagram.png" alt="">
+                        </a></div>
 
 
                     <div class="socialMediaIcons">
                         <p>Twitter</p>
-                        <button><img src="image/twitter.png" alt=""></button>
-                    </div>
+                        <a href="https://www.facebook.com/amperwoodoffcial/"><img src="/static/image/Twitter.png" alt="">
+                        </a></div>
 
                     <div class="socialMediaIcons">
                         <p>Etsy</p>
-                        <button><img src="image/twitter.png" alt=""></button>
-                    </div>
+                        <a href="https://www.facebook.com/amperwoodoffcial/"><img src="/static/image/Twitter.png" alt="">
+                        </a></div>
                 </div>
             </section>
 
@@ -156,23 +158,6 @@
 
 
         </main>
-        <footer>
-            <div>
-                <img src="image/loko.PNG" alt="Logo firmy AmperWood" class="logoMain" height="70px">
-            </div>
-            <div class="footerInfo">
-                <div class="newsletter">
-                    <p>Zapisz się do Newslettera!</p>
-                    <input type="Podaj maila">
-                </div>
-                <div class="underPages">
-                    <p class="footerNavi"><a href="#">Polityka prywatności</a></p>
-                    <p class="footerNavi"><a href="#">Koszty wysyłki</a></p>
-                    <p class="footerNavi"><a href="#">blabla</a></p>
-                    <p class="footerNavi"><a href="#">bla bla1</a></p>
-
-                </div>
-            </div>
-        </footer>
+        {% include 'footer.html' %}
     </div>
 </body></html>

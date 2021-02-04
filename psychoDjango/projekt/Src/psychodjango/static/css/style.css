@@ -16,7 +16,7 @@
 }
 
 
-div.wraper {
+html {
     margin: 0 auto;
     max-width: 1280px;
     background-color: #FFF;
@@ -30,6 +30,11 @@ div.wraper {
     margin-left: auto;
     margin-right: auto;
 
+}
+
+.menu div p {
+    text-align: center;
+    margin: 50px auto;
 }
 
 nav {
@@ -185,7 +190,9 @@ div.soloBlock {
 
 div.soloBlock::after {
     position: absolute;
-    background-image: url(https://amperwood.com/wp-content/uploads/2020/05/DSC6676-1.jpg);
+    background-image: url("../image/otwieracz.jpg");
+    background-position: center;
+    background-size: cover;
     content: "";
     top: 0;
     left: 0;
@@ -193,6 +200,11 @@ div.soloBlock::after {
     right: 0;
     opacity: 0.2;
     z-index: 0;
+}
+
+.soloBlockButton a {
+    text-decoration: none;
+    color: black;
 }
 
 .Btn {
@@ -214,24 +226,118 @@ div.soloBlock::after {
     padding-top: 250px;
 }
 
-/* NOWY PLIK NOWA STRONA */
+/* SKLEP */
 .produktyWSklepie {
     display: block;
     max-width: 1280px;
     margin: 0 auto;
     justify-content: space-between;
     align-content: space-between;
+    vertical-align: middle;
+    text-align: center;
 }
 
-.nazwa div {
-    text-transform: uppercase;
 
 
-}
 
 .produkt {
     display: inline-block;
     text-align: center;
     padding: 40px;
 
+}
+
+.zdjecie img {
+    max-width: 80%;
+}
+
+.produkt div {
+    margin: 10px auto;
+}
+
+.cart a {
+    text-decoration: none;
+    color: #002;
+}
+
+.cart a:hover {
+    background-color: #002;
+    color: #FFF;
+    padding: 5px;
+    border-radius: 1%;
+    transition-duration: 0.3s;
+}
+
+/* $$$$$$$$$$$$    O NAS */
+.bloczki {
+    display: inline-block;
+    margin: 0 auto;
+    max-width: 500px;
+    max-height: 500px;
+    padding: 40px;
+    vertical-align: middle;
+
+}
+
+.bloczki img {
+    margin: 0 auto;
+    max-width: 500px;
+    max-height: 500px;
+    padding: 40px;
+
+    width: 400px;
+}
+
+
+.blocz {
+    text-align: center;
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$ Pojedynczy produkt */
+
+.pojProdukt {
+
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+.pojProduktPage {
+    display: flex;
+    text-align: center;
+    flex: 1 30%;
+}
+
+.pojProduktuFunkcje {
+    padding: 100px;
+}
+
+.pojProduktuFunkcje div {
+    margin: 30px auto;
+}
+
+.opis {
+    margin: 100px auto;
+    text-align: center;
+}
+
+
+/*$$$$$$$$$$$$$$ FOOTER $$$$$*/
+
+
+.underPages a {
+    text-decoration: none;
+    color: black;
+}
+
+/*$$$$$$$$$$$$$$$$$$$$$$ PORTFOLIO*/
+
+.portfolio1 {
+    display: grid;
+    grid-template-columns: 20vw 30vw 50vw;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-gap: 5px;
+}
+
+.proba {
+    object-fit: contain;
 }

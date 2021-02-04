@@ -25,13 +25,16 @@ from account import views as viewsAccount
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home', viewsStrony.home_widok, name='home'),
-    path('kontakt', viewsStrony.kontakt, name='kontakt'),
-    path('oNas', viewsStrony.oNas, name='O nas'),
-    path('produtky', viewsProdukty.produkt_opis_widok, name="produkty"),
-    path('formularz', viewsProdukty.produkt_utworz_widok),
-    path('Sklep', viewsProdukty.produktyWSklepie, name='Sklep'),
-    re_path(r'^Sklep/(?P<slug>.*)/$', viewsProdukty.pojedynczyProdukt,
+   
+    path('', viewsStrony.home_widok, name='home'),
+    path('kontakt/', viewsStrony.kontakt, name='kontakt'),
+    path('oNas/', viewsStrony.oNas, name='O nas'),
+    path('oWzorach/', viewsStrony.oWzorach, name='O wzorach'),
+    path('formularz/', viewsProdukty.produkt_utworz_widok),
+    path('Sklep/', viewsProdukty.productsInStore, name='Sklep'),
+    path('portfiolio/', viewsProdukty.portfolio, name='Portfolio'),
+
+    re_path(r'^Sklep/(?P<slug>.*)/$', viewsProdukty.SingleProduct,
             name='pojedynczy_produkt'),
     path('accounts/', include('account.urls')),
     re_path(r'^Sklep/(?P<slug>.*)/cart', viewsProdukty.cart, name='cart')

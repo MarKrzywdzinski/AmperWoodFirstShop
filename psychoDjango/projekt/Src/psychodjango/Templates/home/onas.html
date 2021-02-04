@@ -1,13 +1,34 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href={% static "css/style.css" %}?{% now "U" %}>
+     <title>Document</title>
 </head>
-<body>
-    {% include 'gowno.html' %}
 
-    {{moje_dane}}, {{numer_telefonu}}
+
+<body>
+    
+{% include 'menu.html' %}
+<div class="blocz">
+  <div class="bloczki"><p>
+      Cześć, tutaj Sebastian i Marcin. Amperwood to mała pracownia stolarska, która mieści się w Toruniu. Pomysł na stworzenie Amperwood, narodził się w grudniu 2018 roku kiedy zafascynowało nas zjawisko wzorów Lichtenberga. Po długich próbach okiełznania kierunków prowadzenia wzorów doszliśmy do perfekcji.
+    
+    </p>
+    </div>
+  <div class="bloczki"><img src={% static "image/onas1.jpg" %} alt=""></div>
+  <div class="bloczki"><img src={% static "image/onas2.jpg" %} alt=""></div>
+  <div class="bloczki"><p>
+      Tworzymy z litego drewna, głównie z jesionu, dębu i olchy. Zaopatrujemy się u lokalnych dostawców, dzięki czemu osobiście wybieramy każdy kawałek drewna z którego tworzymy nasze dzieła. Naszymi flagowymi produktami są deski kuchenne i magnetyczne otwieracze, tworzymy także meble z drewna i stali, ale tak naprawdę z drewna potrafimy stworzyć prawie wszystko.
+    </p>
+
+    </div>
+
+    </div>
+
 </body>
+
+
 </html>

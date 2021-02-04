@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "css/style.css" %}?{% now "U" %}>
+    
+    <title>Document</title>
+</head>
+<body>
+    <class class="wrapper">
+        {% include "menu.html" %}
+
+      <!--   <div class="portFoto"><img src={% static "image/onas2.jpg" %}  alt=""></div>
+        <div class="portFoto"><img src={% static "image/onas2.jpg" %}  alt=""></div>
+        <div class="portFoto"><img src={% static "image/onas2.jpg" %}  alt=""></div>
+        <div class="portFoto"><img src={% static "image/onas2.jpg" %}  alt=""></div>
+     -->
+     <div class="portfolio1">
+    {% for i in portPhoto %}
+         <div class="proba"><img src="{{i.zdjecie.url}}" alt="" ></div>
+    {% endfor %}
+    </div>
+    </class>
+      
+    
+        
+        
+    </div>
+    {% include "footer.html" %}
+</div>
+</body>
+
+</html>

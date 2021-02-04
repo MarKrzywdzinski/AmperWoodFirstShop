@@ -4,7 +4,7 @@ from django.contrib import messages
 
 from account.models import Cart
 from produkty.models import Product
-from produkty.views import pojedynczyProdukt
+from produkty.views import SingleProduct
 
 # Create your views here.
 
