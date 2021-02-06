@@ -132,3 +132,7 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_URL = '/fotki/'
+
+MEDIAFILES_DIRS = [
+    os.path.join(BASE_DIR, 'fotki'),  os.path.join(BASE_DIR, 'portfolioImages')
+]

@@ -6,6 +6,7 @@ from django.contrib.auth import get_user_model
 from produkty.models import Product
 from .forms import ProductForm
 from account.models import Cart
+from produkty.models import Portfolio
 
 itemyWKoszyku = []
 user = get_user_model()
@@ -77,6 +78,23 @@ def cart(request, slug):
 
     return render(request, 'cart.html', {'itemyWKoszyku': itemyWKoszyku, 'suma': suma})
 
+
 def portfolio(request, *args, **kwargs):
-    portPhoto = Product.objects.all()
-    return render(request, "portfolio.html", {"portPhoto": portPhoto})
+    porto = []
+    p = Portfolio.objects.all()
+    p = p.first()
+
+    porto.append(p.photo1)
+    porto.append(p.photo2)
+    porto.append(p.photo3)
+    porto.append(p.photo4)
+    porto.append(p.photo5)
+    porto.append(p.photo6)
+    porto.append(p.photo7)
+    porto.append(p.photo8)
+    porto.append(p.photo9)
+    kontekst = {
+        "porto": porto
+    }
+
+    return render(request, "portfolio.html", kontekst)

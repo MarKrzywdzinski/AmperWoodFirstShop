@@ -19,9 +19,9 @@
         <div class="portFoto"><img src={% static "image/onas2.jpg" %}  alt=""></div>
      -->
      <div class="portfolio1">
-    {% for i in portPhoto %}
-         <div class="proba"><img src="{{i.zdjecie.url}}" alt="" ></div>
-    {% endfor %}
+        {% for i in porto %}
+            <div class="proba"><img src="{{i.url}}" alt="" width="100%"></div>
+        {% endfor %} 
     </div>
     </class>
       

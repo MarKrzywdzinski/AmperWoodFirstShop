@@ -320,6 +320,24 @@ div.soloBlock::after {
     text-align: center;
 }
 
+.pojProduktuFunkcje a {
+    text-decoration: none;
+    color: #002;
+}
+
+.pojProduktuFunkcje a:hover {
+    background-color: #002;
+    color: #FFF;
+    padding: 5px;
+    border-radius: 1%;
+    transition-duration: 0.3s;
+}
+
+.BtnPojProd {
+    background-image: none;
+    outline: none;
+}
+
 
 /*$$$$$$$$$$$$$$ FOOTER $$$$$*/
 
@@ -332,12 +350,65 @@ div.soloBlock::after {
 /*$$$$$$$$$$$$$$$$$$$$$$ PORTFOLIO*/
 
 .portfolio1 {
-    display: grid;
-    grid-template-columns: 20vw 30vw 50vw;
-    grid-template-rows: 1fr 2fr 1fr;
-    grid-gap: 5px;
+    margin: 0 auto;
+    vertical-align: middle;
+    text-align: center;
 }
 
 .proba {
-    object-fit: contain;
+    display: inline;
+}
+
+.proba img {
+    max-width: 300px;
+}
+
+.BtnSingle {
+    background: none;
+    outline: none;
+    border: none;
+
+    font-family: "Brown Regular", "serif";
+    font-weight: 600;
+}
+
+.BtnSingle:hover {
+    color: black;
+
+    transition-duration: 1s;
+    font-size: 20px;
+    font-family: "Brown Regular", "serif";
+    border-color: white;
+    border-width: 2px;
+    font-weight: 600;
+
+}
+
+/* $$$$$$$$$$$$$$$$$ KOSZYK $$$$$$$$$$$$$ */
+.wrapperCart {
+    margin: 0 auto;
+    align-items: center;
+}
+
+.Payment {
+
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.Payment div {
+
+    width: 300px;
+    max-width: 300px;
+}
+
+.SingleP1 .cena {
+
+    border-bottom: solid;
+}
+
+.SingleP2 {
+
+    vertical-align: middle;
 }

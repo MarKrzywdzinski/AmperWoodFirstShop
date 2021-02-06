@@ -18,17 +18,17 @@
     </div>
     <div class="pojProduktuFunkcje">
     <div class="nazwa">{{obj.nazwa}}</div>
-        <div class="cena">{{obj.cena}}</div>    
+        <div class="cena">Cena: {{obj.cena}}</div>    
         
  {% comment %}        <div class="sumup">{{obj.sumup}}</div>
         <div class="sumup">{{obj.slug}}</div>   {% endcomment %}
     <form action="" method="POST" >
             {% csrf_token %}
-            <button type="submit">Dodaj do koszyka</button>
+            <button class="BtnSingle" type="submit" >Dodaj do koszyka</button>
         </form>
 
         <form action="cart">
-        <button type="submit">
+        <button class="BtnSingle" type="submit">
         Przejdz do kosza    
         </button></form>
     </div>

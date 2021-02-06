@@ -31,3 +31,32 @@ class Product(models.Model):
 
     def __str__(self):
         return self.nazwa
+
+
+class Portfolio(models.Model):
+    P = []
+
+    title = models.CharField(max_length=70)
+
+    photo1 = models.ImageField(upload_to='portfolioImages', blank=True)
+    photo2 = models.ImageField(upload_to='portfolioImages', blank=True)
+    photo3 = models.ImageField(upload_to='portfolioImages', blank=True)
+    photo4 = models.ImageField(upload_to='portfolioImages', blank=True)
+    photo5 = models.ImageField(upload_to='portfolioImages', blank=True)
+    photo6 = models.ImageField(upload_to='portfolioImages', blank=True)
+    photo7 = models.ImageField(upload_to='portfolioImages', blank=True)
+    photo8 = models.ImageField(upload_to='portfolioImages', blank=True)
+    photo9 = models.ImageField(upload_to='portfolioImages', blank=True)
+
+    P.append(photo1)
+    P.append(photo2)
+    P.append(photo3)
+    P.append(photo4)
+    P.append(photo5)
+    P.append(photo6)
+    P.append(photo7)
+    P.append(photo8)
+    P.append(photo9)
+
+    def __str__(self):
+        return self.title

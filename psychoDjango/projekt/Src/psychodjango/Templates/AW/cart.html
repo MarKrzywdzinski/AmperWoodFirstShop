@@ -8,19 +8,27 @@
     <title>Document</title>
 </head>
 <body>
-
-    {% for i in itemyWKoszyku %}
-    <div class="nazwa">{{i.nazwa}}</div>
-    <div class="cena">{{i.cena}}</div>
-    {% endfor %}
-    <p>Całkowity koszt zamówienia</p>
-    <div class="suma">{{suma}}</div>
-  
- 
-
-    <div class="cart">
-        <form action="" class="cart" method="POST">
-        </form>
-    </div>
+    <div class="wrapperCart">
+        
+    {% include 'menu.html' %}
+        <div class="Payment">
+            <div class="SingleP1">
+                    {% for i in itemyWKoszyku %}
+                        <div class="nazwa">{{i.nazwa}}</div>
+                        <div class="cena">{{i.cena}}</div>
+                    {% endfor %}
+             </div>  
+            <div class="SingleP2">
+                <p>Całkowity koszt zamówienia</p>
+                <div class="suma">{{suma}}</div>
+             </div>
+            <div class="cart">
+                <button class="btnCart"> <a href="">Przejdź do płatności</a></button>
+            </div>
+        </div>
+    </div>  
+    
+    {% include 'footer.html' %}
+</div>
 </body>
 </html>
